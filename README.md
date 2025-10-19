@@ -1,9 +1,6 @@
-# FaeClass
-Faecalibacterium Core-gene-based Classifier
-
 # FaeClass:  Faecalibacterium Species Distinguish
 
-FaeClass, a core gene-based classifier, enables robust discrimination among closely related Faecalibacterium species, including *F. prausnitzii*, *F. duncaniae*, *F. longum*, and other *Faecalibacterium* species.
+FaeClass, a Core-gene-based Classifier, enables robust discrimination among closely related Faecalibacterium species, including *F. prausnitzii*, *F. duncaniae*, *F. longum*, and other *Faecalibacterium* species.
 
 ## Table of Contents
 
