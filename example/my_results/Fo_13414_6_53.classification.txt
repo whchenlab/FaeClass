@@ -1,0 +1,6 @@
+Type Fp: matches=488, total_score=62860.20
+Type Fd: matches=485, total_score=66909.40
+Type Fl: matches=484, total_score=64249.60
+Type Other: matches=462, total_score=62749.00
+
+Summary: The highest score type is Fd with a total score of 66909.40.

@@ -1,0 +1,11 @@
+Genome	Type	Max_Score
+Fd_13414_6_4.classification.txt	Fd	71796.3
+Fd_4P15.classification.txt	Fd	73605.8
+Fp_SL3_3.classification.txt	Fp	72453.8
+Fp_MCC585.classification.txt	Fp	72924.9
+Fl_CLA-AA-H236.classification.txt	Fl	73097.8
+Fl_Fp360.classification.txt	Fl	72924.4
+Fo_13414_6_53.classification.txt	Other	66909.4
+Fo_Fp77.classification.txt	Other	67220.5
+CLAAAH1.combined.classification.txt	Outgroup	13576.6
+4716a.combined.classification.txt	Outgroup	13099.9

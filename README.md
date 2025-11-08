@@ -14,7 +14,7 @@ FaeClass, a core gene-based classifier, enables robust discrimination among clos
 
   * Usage
 
-  * Expected Output
+  * Output Explanation
 
   * Citation
 
@@ -68,7 +68,7 @@ To install FaeClass, download the model directory (hmm_classifier) and the execu
 
   * Files should be standard protein sequence (FASTA format) with the ".faa" file extension, either from public databases or derived from de novo genome annotation pipelines.
 
-## Expected Output
+## Output Explanation
 
 All results will be saved in the hmm_results directory (customizable via the --output-dir parameter).
 
@@ -94,7 +94,12 @@ All results will be saved in the hmm_results directory (customizable via the 
 
   └── summary.txt                       # Final Summary File
 
-* **Sample Output**
+* **Running Example**
+
+  ```markup
+  cd FaeClass/exmaple
+  python3 classifier.py test --hmm-dir FaeClass/hmm_classifier --output-dir my_results
+  ```
 
   * **[Sample]_hmm_results.txt**
 
@@ -108,9 +113,7 @@ All results will be saved in the hmm_results directory (customizable via the 
     |         score         | Full sequence bit score |
     | description of target |  Functional description |
 
-  ```markup
-  #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ---- # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- --------------------- LNFJIAEA_00122       -          aas_Fp_alignment     -            1.5e-35  118.5   1.8   2.6e-35  117.8   1.8   1.4   1   0   0   1   1   1   1 Bifunctional protein Aas LNFJIAEA_02213       -          accA_Fp_alignment    -            3.8e-22   75.7   1.7   2.4e-21   73.1   2.3   2.1   2   0   0   2   2   2   1 Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha LNFJIAEA_02214       -          accD_Fp_alignment    -            3.2e-36  120.5   1.2   6.3e-36  119.5   1.2   1.5   1   0   0   1   1   1   1 Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta LNFJIAEA_00012       -          ackA_Fp_alignment    -            8.8e-46  151.0   0.8   2.3e-45  149.7   0.8   1.8   1   0   0   1   1   1   1 Acetate kinase 
-  ```
+  ![](README_md_files/68dc7200-bcb7-11f0-9a45-433d18e6f797.jpeg?v=1&type=image)
 
   * **[Sample]_hmm_results_dom.txt**
 
@@ -123,16 +126,7 @@ All results will be saved in the hmm_results directory (customizable via the 
     | hmm coord from/to |      HMM model positions     |
     | ali coord from/to | Alignment sequence positions |
 
-  ```markup
-  #                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
-  # target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
-  #------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
-  LNFJIAEA_00122       -            203 aas_Fp_alignment     -             60   1.5e-35  118.5   1.8   1   1   8.9e-39   2.6e-35  117.8   1.8     1    60     1    61     1    61 0.99 Bifunctional protein Aas
-  LNFJIAEA_02213       -            317 accA_Fp_alignment    -             60   3.8e-22   75.7   1.7   1   2   8.4e-25   2.4e-21   73.1   2.3     1    60     1    58     1    58 0.98 Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
-  LNFJIAEA_02213       -            317 accA_Fp_alignment    -             60   3.8e-22   75.7   1.7   2   2      0.63   1.8e+03   -3.4   0.0    12    22    70    80    69    82 0.82 Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
-  LNFJIAEA_02214       -            290 accD_Fp_alignment    -             60   3.2e-36  120.5   1.2   1   1   2.2e-39   6.3e-36  119.5   1.2     1    60     1    60     1    60 1.00 Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta
-  ...
-  ```
+  ![](README_md_files/b079e160-bcb7-11f0-9a45-433d18e6f797.jpeg?v=1&type=image)
 
   * **[Sample].classification.txt**
 
@@ -146,14 +140,7 @@ All results will be saved in the hmm_results directory (customizable via the 
 
     **Summary**: Final classification result
 
-  ```markup
-  Type Fp: matches=490, total_score=63276.00
-  Type Fd: matches=487, total_score=73982.40
-  Type Fl: matches=487, total_score=64263.30
-  Type Other: matches=464, total_score=61032.70
-
-  Summary: The highest score type is Fd with a total score of 73982.40.
-  ```
+  ![](README_md_files/113fe5d0-bcb8-11f0-9a45-433d18e6f797.jpeg?v=1&type=image)
 
   * **summary.txt**
 
@@ -165,19 +152,7 @@ All results will be saved in the hmm_results directory (customizable via the 
     |    Type   |        Final classification result        |
     | Max_Score | Total score of the highest taxonomic unit |
 
-  ```markup
-  Genome	Type	Max_Score
-  GCA_002549855	Fd	73982.40
-  GCA_002549985	Fd	73855.60
-  GCA_020687245	Fl	73097.80
-  GCA_020687265	Fl	72946.80
-  GCA_000166035	Other	65640.30
-  GCA_001406355	Other	66909.40
-  GCA_000154385	Fp	73014.60
-  GCA_000209855	Fp	72453.80
-  CLAAAH117.combined	Outgroup	12326.80
-  CLAAAH118.combined	Outgroup	11977.30
-  ```
+  ![](README_md_files/35b7fce0-bcb8-11f0-9a45-433d18e6f797.jpeg?v=1&type=image)
 
   ## Citation
 
