@@ -158,5 +158,7 @@ All results will be saved in the hmm_results directory (customizable via the 
 
   If you use FaeClass, please cite:
 
-  Li et al. [期刊]. Pan-genomic reclassification of Faecalibacterium prausnitzii sensu lato reveals F. longum as a dominant, functionally distinct, and health-associated gut anaerobe. Reference click here
+  Li et al.  Pan-genomic reclassification of Faecalibacterium prausnitzii sensu lato reveals F. longum as a dominant, functionally distinct, and health-associated gut anaerobe.
+
+  github: https://github.com/whchenlab/FaeClass
 
